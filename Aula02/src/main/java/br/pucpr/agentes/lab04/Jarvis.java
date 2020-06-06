@@ -3,6 +3,7 @@ package br.pucpr.agentes.lab04;
 import br.pucpr.agentes.lab06.Bateria;
 import br.pucpr.agentes.lab06.ConsumirEnergiaBehaviour;
 import br.pucpr.agentes.lab06.RecarregarBateriaBehaviour;
+import br.pucpr.agentes.lab07.PensarBehaviour;
 import jade.core.Agent;
 
 public class Jarvis extends Agent {
@@ -16,6 +17,9 @@ public class Jarvis extends Agent {
     @Override
     protected void setup() {
         try {
+            log("Olá, eu sou o agente " + getName());
+            log("Pode me chamar apenas de " + getLocalName());
+
             Object[] args = getArguments();
 
             String nivelBateria = args[0].toString();
@@ -24,8 +28,6 @@ public class Jarvis extends Agent {
             log("Minha bateria está em " + nivelBateria);
             log("Obedeço apenas as ordens do " + dono);
 
-            log("Olá, eu sou o agente " + getName());
-            log("Pode me chamar apenas de " + getLocalName());
             log("HAP: " + getHap());
             log("AgentState: " + getAgentState());
             log("AID: " + getAID());
@@ -38,9 +40,10 @@ public class Jarvis extends Agent {
             log("QueueSize: " + getQueueSize());
             log("State: " + getState());
 
-            this.bateria = new Bateria(10);
+            this.bateria = new Bateria(100);
             addBehaviour(new ConsumirEnergiaBehaviour(this, this.bateria, 1000));
             addBehaviour(new RecarregarBateriaBehaviour(this, this.bateria, 100));
+            addBehaviour(new PensarBehaviour(this, this.bateria, 5000));
         } catch (Exception e) {
             e.printStackTrace();
         }

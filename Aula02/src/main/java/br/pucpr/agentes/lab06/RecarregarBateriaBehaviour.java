@@ -14,9 +14,9 @@ public class RecarregarBateriaBehaviour extends TickerBehaviour {
 
     @Override
     protected void onTick() {
-        if (bateria.getCarga() <= 2) {
+        if (bateria.getCarga() <= 20) {
             carregar = true;
-        } else if (bateria.getCarga() >= 8) {
+        } else if (bateria.getCarga() >= 80) {
             carregar = false;
         }
         if (carregar) {

@@ -7,7 +7,7 @@ public class SMA {
                 "-gui",
                 "-name", "aula02",
                 "-local-host", "127.0.0.1",
-                "Siri:br.pucpr.agentes.lab05.Siri(11,Sábado)"};
+                "Jarvis:br.pucpr.agentes.lab05.Jarvis(100%,Sr Tony Stark);Siri:br.pucpr.agentes.lab05.Siri(11,Sábado)"};
         jade.Boot.main(init);
     }
     

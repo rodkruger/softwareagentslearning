@@ -7,7 +7,7 @@ public class BancoSMA {
                 "-gui",
                 "-name", "aula11",
                 "-local-host", "127.0.0.1",
-                "Cliente01:br.pucpr.agentes.sma.AgenteCliente;Banco:br.pucpr.agentes.sma.AgenteBanco"};
+                "Cliente01:br.pucpr.agentes.sma.AgenteCliente;Cliente02:br.pucpr.agentes.sma.AgenteCliente;Cliente03:br.pucpr.agentes.sma.AgenteCliente;Banco:br.pucpr.agentes.sma.AgenteBanco"};
         jade.Boot.main(init);
     }
 

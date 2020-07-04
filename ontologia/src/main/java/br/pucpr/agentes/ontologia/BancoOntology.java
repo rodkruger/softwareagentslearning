@@ -9,7 +9,7 @@ import jade.core.CaseInsensitiveString;
 
 /** file: BancoOntology.java
  * @author ontology bean generator
- * @version 2020/07/4, 11:16:52
+ * @version 2020/07/4, 11:32:46
  */
 public class BancoOntology extends jade.content.onto.Ontology  {
   //NAME
@@ -28,7 +28,7 @@ public class BancoOntology extends jade.content.onto.Ontology  {
     public static final String ENVIARSALDOACTION="EnviarSaldoAction";
     public static final String DEPOSITARACTION_VALOR="valor";
     public static final String DEPOSITARACTION="DepositarAction";
-    public static final String SAQUEACTION_VALOR="valor";
+    public static final String SAQUEACTION_CONTA="conta";
     public static final String SAQUEACTION="SaqueAction";
     public static final String CONTA_NUMERO="numero";
     public static final String CONTA_TIPO="tipo";
@@ -65,7 +65,7 @@ public class BancoOntology extends jade.content.onto.Ontology  {
     contaSchema.add(CONTA_SALDO, (TermSchema)getSchema(BasicOntology.FLOAT), ObjectSchema.OPTIONAL);
     contaSchema.add(CONTA_TIPO, (TermSchema)getSchema(BasicOntology.STRING), ObjectSchema.OPTIONAL);
     contaSchema.add(CONTA_NUMERO, (TermSchema)getSchema(BasicOntology.STRING), ObjectSchema.OPTIONAL);
-    saqueActionSchema.add(SAQUEACTION_VALOR, (TermSchema)getSchema(BasicOntology.FLOAT), ObjectSchema.OPTIONAL);
+    saqueActionSchema.add(SAQUEACTION_CONTA, contaSchema, ObjectSchema.OPTIONAL);
     depositarActionSchema.add(DEPOSITARACTION_VALOR, (TermSchema)getSchema(BasicOntology.FLOAT), ObjectSchema.OPTIONAL);
     enviarSaldoActionSchema.add(ENVIARSALDOACTION_CONTA, contaSchema, ObjectSchema.OPTIONAL);
 

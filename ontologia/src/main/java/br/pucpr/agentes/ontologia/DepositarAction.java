@@ -8,7 +8,7 @@ import jade.core.*;
 /**
 * Protege name: DepositarAction
 * @author ontology bean generator
-* @version 2020/07/4, 11:16:53
+* @version 2020/07/4, 11:36:27
 */
 public class DepositarAction implements AgentAction {
 
@@ -21,6 +21,17 @@ public class DepositarAction implements AgentAction {
    }
    public float getValor() {
      return this.valor;
+   }
+
+   /**
+* Protege name: conta
+   */
+   private Conta conta;
+   public void setConta(Conta value) { 
+    this.conta=value;
+   }
+   public Conta getConta() {
+     return this.conta;
    }
 
 }

@@ -8,7 +8,7 @@ import jade.core.*;
 /**
 * Protege name: EnviarSaldoAction
 * @author ontology bean generator
-* @version 2020/07/4, 11:16:53
+* @version 2020/07/4, 11:36:27
 */
 public class EnviarSaldoAction implements AgentAction {
 

@@ -8,7 +8,7 @@ import jade.core.*;
 /**
 * Protege name: Conta
 * @author ontology bean generator
-* @version 2020/07/4, 11:16:52
+* @version 2020/07/4, 11:32:46
 */
 public class Conta implements Concept {
 

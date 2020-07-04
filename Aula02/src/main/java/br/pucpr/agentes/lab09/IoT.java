@@ -44,7 +44,7 @@ public class IoT extends Agent {
                 ACLMessage msg = receive();
                 if (msg != null) {
                     if (msg.getPerformative() == ACLMessage.INFORM) {
-                        //Guardar as informações recebidad
+                        // Guardar as informações recebidad
                         String[] maisCoisas = msg.getContent().split(";");
                         for (String coisa : maisCoisas) {
                             if (coisa.length() < 2) return;
